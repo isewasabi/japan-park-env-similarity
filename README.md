@@ -97,10 +97,10 @@ Also contains `PARK_NAME_MAP` (Japanese → English slug mapping, used only in p
 Trains a park-specific XGBoost classifier for each of the 35 national parks. Key methodological features:
 
 - **Block-matched negative sampling** with global mixing (`mix_global_frac=0.3`): negative samples are drawn to spatially match the distribution of positive samples, with 30% drawn at random from the whole country
-- **Automatic `group_cut` tuning**: H3 prefix length is adjusted automatically to ensure sufficient positive spatial groups for cross-validation
+- **Automatic spatial resolution tuning**: the H3 parent resolution is adjusted automatically within the range of resolutions 5 to 9 to ensure sufficient positive spatial groups for cross-validation
 - **Greedy fold assignment with single-class repair**: folds are constructed to balance positive counts, then repaired to ensure every test fold contains both classes
 - **Spatially grouped nested cross-validation** with automatic per-fold gap relaxation (`gap_relax_steps=(1, 0)`)
-- **OOF threshold calibration**: the production threshold is determined from pooled out-of-fold predictions
+- **CV-averaged threshold calibration**: the production threshold is determined as the mean of the F1-maximizing thresholds obtained within each outer cross-validation fold
 
 After cross-validation, each model is refit on the full balanced dataset and applied nationwide to generate a continuous similarity surface. Outputs per park are written to `data/results/{slug}_prod_g7_gap1/`.
 
@@ -115,7 +115,7 @@ After cross-validation, each model is refit on the full balanced dataset and app
 
 ## Model outputs
 
-Per-park outputs are in `data/results/{slug}_prod_g7_gap1/`. Multiple candidate runs may exist per park (e.g. `_prod_g7_gap1`, `_prod_g7_gap1_rerun`, `_prod_g7_gap2`); `03_analysis_figures.ipynb` selects the best run automatically based on the tier criteria described in the manuscript.
+Per-park outputs are in `data/results/{slug}_prod_g8_gap1/`. Multiple candidate runs may exist per park (e.g. `_prod_g8_gap1`, `_prod_g8_gap1_rerun`, `_prod_g8_gap2`); `03_analysis_figures.ipynb` selects the best run automatically based on the tier criteria described in the manuscript.
 
 | File | Included in repository | Description |
 |------|----------------------|-------------|
@@ -148,7 +148,7 @@ cd japan-park-env-similarity
 pip install -r requirements.txt
 ```
 
-Python 3.11 was used for all analyses.
+Python 3.13 was used for all analyses.
 
 ---
 
