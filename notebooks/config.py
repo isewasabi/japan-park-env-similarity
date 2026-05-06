@@ -57,9 +57,9 @@ PARKS = list(PARK_NAME_MAP.values())
 
 # ── Model run candidates (priority order) ────────────────────────────────────
 RUN_CANDIDATES = [
-    "{slug}_prod_g7_gap1",
-    "{slug}_prod_g7_gap1_rerun",
-    "{slug}_prod_g7_gap2",
+    "{slug}_prod_g8_gap1",
+    "{slug}_prod_g8_gap1_rerun",
+    "{slug}_prod_g8_gap2",
 ]
 
 # ── Modeling parameters ──────────────────────────────────────────────────────
