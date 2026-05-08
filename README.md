@@ -5,7 +5,7 @@ Machine-learning pipeline for nationwide environmental similarity mapping of pro
 
 This repository contains the code and data associated with the following manuscript:
 
-> Ise H. & Kamada M. (manuscript in preparation). A park-specific machine-learning framework for quantifying environmental similarity in protected area networks: a nationwide application to Japanese national parks. *Ecological Informatics*.
+> Ise H. & Kamada M. (manuscript in preparation). Physical environmental indicators of protected area representativeness: a machine-learning approach across 35 Japanese national parks *Ecological Indicators*.
 
 The pipeline trains a park-specific XGBoost classifier for each of Japan's 35 national parks using multidimensional physical environmental variables (climate, topography, geology, micro-landforms) integrated within an H3 hexagonal grid framework. Spatially grouped nested cross-validation is applied to produce unbiased performance estimates, and SHAP values are used to interpret variable contributions. Park-specific models are then extrapolated nationwide to generate continuous environmental similarity surfaces.
 
@@ -179,4 +179,4 @@ Data outputs: CC BY 4.0
 
 ## Citation
 
-Ise H. & Kamada M. (manuscript in preparation). A park-specific machine-learning framework for quantifying environmental similarity in protected area networks: a nationwide application to Japanese national parks. *Ecological Informatics*.
+Ise H. & Kamada M. (manuscript in preparation). Physical environmental indicators of protected area representativeness: a machine-learning approach across 35 Japanese national parks. *Ecological Indicators*.
