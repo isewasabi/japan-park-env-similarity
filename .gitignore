@@ -13,10 +13,7 @@ qgis/nps_20250428.geojson
 qgis/gdem_gaus_1kmresample_Hillshade.tif
 qgis/h3_jpn_res9.parquet
 notebooks/__pycache__/
-notebooks/x02_modeling.ipynb
-notebooks/x02_modeling_2.ipynb
-notebooks/x03_analysis_figures.ipynb
-notebooks/xtmp_analysis_table.ipynb
+notebooks/x*.ipynb
 paper_outputs/illustrator/
 paper_outputs/illustrator-tmp/
 paper_outputs/ver1/

@@ -1,0 +1,197 @@
+{
+  "park_name": "unzen",
+  "n_positive": 186,
+  "n_negative": 186,
+  "feature_count": 36,
+  "features": [
+    "elev_mean",
+    "slopemean",
+    "chishitsu_age",
+    "prec_year",
+    "ave_temp_y",
+    "max_snow_y",
+    "bichikei_en_Kawahara",
+    "bichikei_en_Sand bar_pebble bar",
+    "bichikei_en_Sand dune_sand bar lowland",
+    "bichikei_en_alluvial fan",
+    "bichikei_en_back marsh",
+    "bichikei_en_coastal waters",
+    "bichikei_en_deltas and coastal lowlands",
+    "bichikei_en_foothills",
+    "bichikei_en_gravel plateau",
+    "bichikei_en_hills",
+    "bichikei_en_lake",
+    "bichikei_en_landfill",
+    "bichikei_en_mountains",
+    "bichikei_en_natural embankment",
+    "bichikei_en_reclaimed land",
+    "bichikei_en_river channel",
+    "bichikei_en_rock plateau",
+    "bichikei_en_sand dunes",
+    "bichikei_en_shore_reef",
+    "bichikei_en_unknown",
+    "bichikei_en_valley bottom lowland",
+    "bichikei_en_volcanic ash plateau",
+    "bichikei_en_volcanic foothills",
+    "bichikei_en_volcanic hills",
+    "bichikei_en_volcanic land",
+    "group_en_Igneous rocks",
+    "group_en_Metamorphic rocks",
+    "group_en_Other",
+    "group_en_Sedimentary rocks",
+    "group_en_unknown"
+  ],
+  "model_id": "3e8bfbd67ef7-unzen",
+  "param_grid": [
+    {
+      "max_depth": 4,
+      "learning_rate": 0.1,
+      "n_estimators": 300,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8
+    },
+    {
+      "max_depth": 6,
+      "learning_rate": 0.1,
+      "n_estimators": 400,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8
+    },
+    {
+      "max_depth": 6,
+      "learning_rate": 0.05,
+      "n_estimators": 600,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9
+    }
+  ],
+  "chosen_params_each_fold": [
+    {
+      "max_depth": 4,
+      "learning_rate": 0.1,
+      "n_estimators": 300,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8
+    },
+    {
+      "max_depth": 6,
+      "learning_rate": 0.05,
+      "n_estimators": 600,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9
+    },
+    {
+      "max_depth": 6,
+      "learning_rate": 0.1,
+      "n_estimators": 400,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8
+    },
+    {
+      "max_depth": 6,
+      "learning_rate": 0.1,
+      "n_estimators": 400,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8
+    },
+    {
+      "max_depth": 4,
+      "learning_rate": 0.1,
+      "n_estimators": 300,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8
+    }
+  ],
+  "outer_metrics": [
+    {
+      "fold": 1,
+      "roc_auc": 0.5513468013468013,
+      "pr_auc": 0.5510949534630961,
+      "f1": 0.7105263157894737,
+      "accuracy": 0.5510204081632653,
+      "threshold": 0.006783379474654794,
+      "test_pos": 81,
+      "test_neg": 66,
+      "used_gap_kring": 1
+    },
+    {
+      "fold": 2,
+      "roc_auc": 0.42328042328042326,
+      "pr_auc": 0.7708020391410947,
+      "f1": 0.8666666666666667,
+      "accuracy": 0.7647058823529411,
+      "threshold": 0.020959604531526566,
+      "test_pos": 27,
+      "test_neg": 7,
+      "used_gap_kring": 1
+    },
+    {
+      "fold": 3,
+      "roc_auc": 0.5100913937547601,
+      "pr_auc": 0.260819718307464,
+      "f1": 0.33986928104575165,
+      "accuracy": 0.2047244094488189,
+      "threshold": 0.03888068782786528,
+      "test_pos": 26,
+      "test_neg": 101,
+      "used_gap_kring": 1
+    },
+    {
+      "fold": 4,
+      "roc_auc": 0.576923076923077,
+      "pr_auc": 0.8090649528882379,
+      "f1": 0.8,
+      "accuracy": 0.6857142857142857,
+      "threshold": 0.0588383701009055,
+      "test_pos": 26,
+      "test_neg": 9,
+      "used_gap_kring": 1
+    },
+    {
+      "fold": 5,
+      "roc_auc": 0.3846153846153847,
+      "pr_auc": 0.8807892536352362,
+      "f1": 0.8627450980392157,
+      "accuracy": 0.7586206896551724,
+      "threshold": 0.10910805749396484,
+      "test_pos": 26,
+      "test_neg": 3,
+      "used_gap_kring": 1
+    }
+  ],
+  "aggregated": {
+    "roc_auc_mean": 0.4892514159840893,
+    "roc_auc_std": 0.07386113000425361,
+    "pr_auc_mean": 0.6545141834870257,
+    "pr_auc_std": 0.22552165400132618,
+    "f1_mean": 0.7159614723082215,
+    "f1_std": 0.19636437547627864,
+    "acc_mean": 0.5929571350668967,
+    "acc_std": 0.20882014884277908,
+    "threshold_mean_cv": 0.0469140198857834,
+    "threshold_std_cv": 0.03566208867187152
+  },
+  "production_threshold": 0.0469140198857834,
+  "threshold_source": "cv",
+  "threshold_oof": 0.003689752658829093,
+  "random_seed": 42,
+  "label_shuffle": true,
+  "extrapolate": false,
+  "group_cut_base": 8,
+  "group_cut_used": 5,
+  "gap_kring_requested": 1,
+  "gap_prefix_cut": null,
+  "mix_global_frac": 0.3,
+  "outer_splits_requested": 5,
+  "outer_splits_effective": 5,
+  "skipped_folds": 0,
+  "auto_group_cut": true,
+  "auto_gap_relax": true,
+  "gap_relax_steps": [
+    1,
+    0
+  ],
+  "max_fold_repairs": 200,
+  "min_precision": null,
+  "min_recall": null
+}
