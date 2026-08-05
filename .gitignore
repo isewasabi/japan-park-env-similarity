@@ -1,5 +1,7 @@
 .claude/
 .env/
+.tmp/
+japan-park-env-similarity_data_v1.2.zip
 data/raw/
 data/interim/
 data/results/**/*.joblib
@@ -22,3 +24,5 @@ paper_outputs/*.parquet
 paper_outputs/*.pdf
 paper_outputs/*.csv
 paper_outputs/*.xlsx
+fix/
+sute/
